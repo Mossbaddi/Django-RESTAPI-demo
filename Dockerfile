@@ -8,6 +8,10 @@ WORKDIR /app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Installer mysql pour avoir accès au dbshell
+RUN apt update
+RUN apt install -y default-mysql-client
+
 # Copier le reste des fichiers du projet dans le conteneur
 COPY . .
 
