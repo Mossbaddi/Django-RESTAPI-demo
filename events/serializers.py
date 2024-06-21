@@ -1,14 +1,16 @@
 from rest_framework import serializers
 from .models import Event, Participant
 
-class EventSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Event
-        fields = '__all__'  # Sérialise tous les champs du modèle
-
 class ParticipantSerializer(serializers.ModelSerializer):
-    event = serializers.PrimaryKeyRelatedField(read_only=True)
-
     class Meta:
         model = Participant
-        fields = '__all__'
+        fields = ['id', 'name', 'email']
+
+class EventSerializer(serializers.ModelSerializer):
+    participants = ParticipantSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Event
+        fields = ['id', 'name', 'location', 'date', 'description', 'participants']
+    def get_participants_count(self, obj):
+        return obj.participants.count()
