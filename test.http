@@ -1,0 +1,77 @@
+
+# GET list of events
+GET http://localhost:8000/api/events/
+Content-Type: application/json
+
+###
+
+# POST create a new event
+POST http://localhost:8000/api/events/
+Content-Type: application/json
+
+{
+    "name": "New Event",
+    "location": "New Location",
+    "date": "2023-01-01",
+    "description": "This is a new event."
+}
+
+###
+
+# GET specific event
+GET http://localhost:8000/api/events/1/
+Content-Type: application/json
+
+###
+
+# PUT update an event
+PUT http://localhost:8000/api/events/1/
+Content-Type: application/json
+
+{
+    "name": "Updated Event",
+    "location": "Updated Location",
+    "date": "2023-01-02",
+    "description": "Updated description."
+}
+
+###
+
+# PATCH partial update on an event
+PATCH http://localhost:8000/api/events/1/
+Content-Type: application/json
+
+{
+    "description": "Partially updated description."
+}
+
+###
+
+# DELETE an event
+DELETE http://localhost:8000/api/events/1/
+Content-Type: application/json
+
+###
+
+# POST create a new participant
+POST http://localhost:8000/api/participants/
+Content-Type: application/json
+
+{
+    "event": 1,
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+}
+
+###
+
+# GET specific participant
+GET http://localhost:8000/api/participants/1/
+Content-Type: application/json
+
+###
+
+# DELETE a participant
+DELETE http://localhost:8000/api/participants/1/
+Content-Type: application/json
+
