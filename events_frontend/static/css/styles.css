@@ -1,0 +1,81 @@
+/* static/events_frontend/css/styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+header, footer {
+    background-color: #0056b3;  /* Slightly darker blue for better contrast */
+    color: #ffffff;
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+main {
+    padding: 40px;
+    min-height: 80vh; /* Minimum height */
+}
+
+h1, h2 {
+    font-weight: normal;
+    color: #0056b3;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+.event-list, .event-details {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-list:hover, .event-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.event-item {
+    padding: 15px;
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.3s;
+}
+
+.event-item:hover {
+    background-color: #f9f9f9;
+}
+
+.event-item:last-child {
+    border-bottom: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue for hover state */
+    text-decoration: underline;
+}
+
+footer {
+    font-size: 0.8em;
+    text-align: center;
+    padding: 15px 0;
+}
+

@@ -1,4 +1,6 @@
 <!-- templates/events_frontend/base.html -->
+<!-- pour utiliser le lien vers le CSS -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Event Management System{% endblock %}</title>
     {% block extra_head %}{% endblock %}
-    <!-- Le lien vers le CSS sera ajouté ici plus tard -->
+    <!-- Le lien vers le CSS -->
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header>
