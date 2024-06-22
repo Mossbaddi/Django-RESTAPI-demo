@@ -149,3 +149,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
+
+# API URL
+API_URL = 'http://localhost:8000/api'

@@ -1,0 +1,19 @@
+<!-- templates/events_frontend/event_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}List of Events{% endblock %}
+
+{% block content %}
+<h2>List of Events</h2>
+<div class="event-list">
+    {% for event in events %}
+    <div class="event-item">
+        <h3>{{ event.name }}</h3>
+        <p>{{ event.date | date:"F d, Y" }} at {{ event.location }}</p>
+        <a href="{% url 'events_frontend:event_detail' event.id %}">Details</a>
+    </div>
+    {% empty %}
+    <p>No events available.</p>
+    {% endfor %}
+</div>
+{% endblock %}

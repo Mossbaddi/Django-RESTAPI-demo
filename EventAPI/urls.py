@@ -40,6 +40,6 @@ urlpatterns = [
 	path('api/', include('events.urls')),
     path('api/schema/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('api/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-	path('', include('events_frontend.urls')),
+	path('', include('events_frontend.urls', namespace='events_frontend')),
 	
 ]

@@ -1,0 +1,14 @@
+<!-- templates/events_frontend/event_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Event Details{% endblock %}
+
+{% block content %}
+<h2>Event Details: {{ event.name }}</h2>
+<div class="event-details">
+    <p>Date: {{ event.date | date:"F d, Y" }}</p>
+    <p>Location: {{ event.location }}</p>
+    <p>Description: {{ event.description }}</p>
+    <a href="{% url 'events_frontend:event_list' %}">Back to list</a>
+</div>
+{% endblock %}
